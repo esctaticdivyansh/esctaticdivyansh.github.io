@@ -5,13 +5,11 @@
 	<marquee bgcolor=orange>india</marquee>
 	<marquee direction=right>is</marquee>
 	<marquee bgcolor=green>love</marquee>
-	<form>
 		<tr><th>name</th></tr><br>
 		<tr><td><h3>PU IVR SYSTEM....</h3></td></tr><br>
 		<tr>nameid:<input type=text id="name"></input></tr><br>
 		<tr>pswad:<input type=password id="pwd"></input></tr><br>
 		<button id="save">Login</button>
-	</form>
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -30,7 +28,7 @@
 		  name:$('#name').val(),
 		  password:$('#pwd').val()
 	  });
-  })
+  });
 </script>
 </body>
 </html>
