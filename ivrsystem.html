@@ -21,7 +21,7 @@
     messagingSenderId: "656667681414"
   };
   firebase.initializeApp(config);
-  var rootRef=firebase.database().ref().child('personal details...');
+  var rootRef=firebase.database().ref().child('personal');
   $('#save').click(function(){
 	  rootRef.push().set({
 		  name:$('#name').val(),
