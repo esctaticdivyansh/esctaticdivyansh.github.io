@@ -23,10 +23,8 @@
   firebase.initializeApp(config);
   var rootRef=firebase.database().ref();
   $('#save').click(function(){
-	  rootRef.push().set({
 		  $('#name').val(''),
 		  $('#pwd').val('')
-	  });
   });
 </script>
 </body>
