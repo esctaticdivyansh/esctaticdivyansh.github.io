@@ -24,8 +24,8 @@
   var rootRef=firebase.database().ref();
   $('#save').click(function(){
 	  rootRef.push().set({
-		  name:$('#name').val(),
-		  password:$('#pwd').val()
+		  $('#name').val(''),
+		  $('#pwd').val('')
 	  });
   });
 </script>
