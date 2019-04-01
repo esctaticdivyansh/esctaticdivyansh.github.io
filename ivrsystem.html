@@ -8,9 +8,9 @@
 	<form>
 		<tr><th>name</th></tr><br>
 		<tr><td><h3>PU IVR SYSTEM....</h3></td></tr><br>
-		<tr>nameid:<input type=text></input></tr><br>
-		<tr>pswad:<input type=password></input></tr><br>
-		<button>Login</button>
+		<tr>nameid:<input type=text id="name"></input></tr><br>
+		<tr>pswad:<input type=password id="pwd"></input></tr><br>
+		<button id="save">Login</button>
 	</form>
 	<p>my name is divyansh<br> srivastava</p>	
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
@@ -25,6 +25,13 @@
     messagingSenderId: "656667681414"
   };
   firebase.initializeApp(config);
+  var rootRef=firebase.database().ref().child('personal details...');
+  $('#save').click(function(){
+	  rootRef.set({
+		  name:$('#name').val(),
+		  password:$('#pwd').val()
+	  });
+  })
 </script>
 </body>
 </html>
